@@ -8,6 +8,15 @@ namespace Bundle
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+            //enable bundles
+            BundleTable.EnableOptimizations = true;
+
+            //new bundle
+            //all JavaScript = *.js / subdirectories = true
+            bundles.Add(new ScriptBundle("/common").IncludeDirectory(
+                "~/Scripts/common", "*.js", true));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
