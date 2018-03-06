@@ -162,7 +162,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\common\common.js" />
-    <Content Include="Scripts\common\debug\debug.js" />
+    <Content Include="Scripts\common\debug\debug.dbg.js" />
     <Content Include="Scripts\common\display.js" />
     <Content Include="Scripts\common\example.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

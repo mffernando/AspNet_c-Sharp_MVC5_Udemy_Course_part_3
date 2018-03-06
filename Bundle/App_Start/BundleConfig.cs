@@ -14,8 +14,17 @@ namespace Bundle
 
             //new bundle
             //all JavaScript = *.js / subdirectories = true
-            bundles.Add(new ScriptBundle("/common").IncludeDirectory(
+            bundles.Add(new ScriptBundle("~/common").IncludeDirectory(
                 "~/Scripts/common", "*.js", true));
+
+            //skip extension .dbg.js
+            bundles.IgnoreList.Ignore("*.dbg.js");
+
+            //ordening the .js archives to execution
+            var order = new BundleFileSetOrdering("ordening");
+            order.Files.Add("~/common/example.js");
+            order.Files.Add("~/common/display.js");
+            bundles.FileSetOrderList.Insert(0, order);
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));

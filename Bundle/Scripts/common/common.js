@@ -1,2 +1,2 @@
 ﻿var common = common || {};
-common.name = "Name";
+common.name = "Welcome!";
